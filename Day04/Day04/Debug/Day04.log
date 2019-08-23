@@ -1,5 +1,23 @@
-﻿  main.cpp
-c:\users\stl\source\repos\day04\day04\main.cpp(117): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+﻿  Engine.cpp
+c:\users\stl\source\repos\day04\day04\engine.cpp(27): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\conio.h(453): note: 'getch' 선언을 참조하십시오.
-c:\users\stl\source\repos\day04\day04\main.cpp(162): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Day04.vcxproj -> C:\Users\stl\source\repos\Day04\Debug\Day04.exe
+  Monster.cpp
+  Player.cpp
+  코드를 생성하고 있습니다...
+main.obj : error LNK2005: "int PlayerX" (?PlayerX@@3HA)이(가) Engine.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: "int PlayerY" (?PlayerY@@3HA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Map.obj : error LNK2005: "int PlayerX" (?PlayerX@@3HA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Map.obj : error LNK2005: "int PlayerY" (?PlayerY@@3HA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Monster.obj : error LNK2005: "int PlayerX" (?PlayerX@@3HA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Monster.obj : error LNK2005: "int PlayerY" (?PlayerY@@3HA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Monster.obj : error LNK2005: "bool bIsRunning" (?bIsRunning@@3_NA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Monster.obj : error LNK2005: "bool gameend" (?gameend@@3_NA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Monster.obj : error LNK2005: "bool gameover" (?gameover@@3_NA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Player.obj : error LNK2005: "bool bIsRunning" (?bIsRunning@@3_NA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Player.obj : error LNK2005: "bool gameend" (?gameend@@3_NA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Player.obj : error LNK2005: "bool gameover" (?gameover@@3_NA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Player.obj : error LNK2005: "int PlayerX" (?PlayerX@@3HA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Player.obj : error LNK2005: "int PlayerY" (?PlayerY@@3HA)이(가) Engine.obj에 이미 정의되어 있습니다.
+Map.obj : error LNK2001: "int GoalX" (?GoalX@@3HA) 외부 기호를 확인할 수 없습니다.
+Map.obj : error LNK2001: "int GoalY" (?GoalY@@3HA) 외부 기호를 확인할 수 없습니다.
+C:\Users\stl\source\repos\Day04\Debug\Day04.exe : fatal error LNK1120: 2개의 확인할 수 없는 외부 참조입니다.
