@@ -22,17 +22,13 @@ Player::~Player()
 
 }
 
-void Player::Initialize()
-{
-
-}
 
 void Player::Move(int KeyCode, class Map* map)
 {
 	int NewPlayerX = X;
 	int NewPlayerY = Y;
 
-	if (KeyCode == UP)
+	if (KeyCode == UP )
 	{
 		NewPlayerY--;
 	}
@@ -57,8 +53,13 @@ void Player::Move(int KeyCode, class Map* map)
 
 }
 
+void Player::Tick(int KeyCode, class Map* map)
+{
+	Move(KeyCode,map);
+}
+
 void Player::Render()
 {
-	GameplayStatics::GotoXY(X, Y);
+	GameplayStatics::GotoXY(X, Y, 4);
 	printf("%c", Shape);
 }

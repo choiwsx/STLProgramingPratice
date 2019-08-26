@@ -24,7 +24,7 @@ void Map::Render()
 	{
 		for (int x = 0; x < 10; x++)
 		{
-			GameplayStatics::GotoXY(x, y);
+			GameplayStatics::GotoXY(x, y, 11);
 			printf("%c", Tile[data[y][x]]);
 		}
 	}

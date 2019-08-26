@@ -17,8 +17,7 @@ Goal::~Goal()
 
 void Goal::Render()
 {
-
-	GameplayStatics::GotoXY(X, Y);
+	GameplayStatics::GotoXY(X, Y, 6);
 	printf("%c", Shape);
 }
 

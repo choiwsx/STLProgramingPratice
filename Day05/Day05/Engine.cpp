@@ -12,29 +12,20 @@ Engine::Engine()
 	bIsRunnging = true;
 	printf("엔진 생성\n");
 
-	player = new Player();
-	map = new Map();
-	monster = new Monster();
-	goal = new Goal();
-	gameMode = new GameMode();
+
 
 }
 
 
 Engine::~Engine()
 {
-
-	delete player;
-	player = nullptr;
-
-	delete map;
-	map = nullptr;
-
-	delete monster;
-	monster = nullptr;
-
-	delete goal;
-	goal = nullptr;
+	for (auto actor : actors)
+	{
+		delete actor;
+		actor = nullptr;
+	}
+	
+	actors.clear();
 
 	delete gameMode;
 	gameMode = nullptr;
@@ -60,9 +51,18 @@ void Engine::Tick()
 		return;
 	}
 
-	player->Move(KeyCode, map);
-	monster->Move(map);
-	EGameOverType result = gameMode->CheckRule(player, monster, goal);
+	//player->Move(KeyCode, map);
+
+	for (auto actor : actors)
+	{
+		//actors 0은 무조건 맵 
+		actor->Tick(KeyCode, (Map*)actors[0]);
+		
+	}
+
+
+	
+	EGameOverType result = gameMode->CheckRule(actors);
 	switch (result)
 	{
 		case EGameOverType::Dead:
@@ -76,16 +76,16 @@ void Engine::Tick()
 		}
 		break;
 	}
-
+	
 
 }
 
 void Engine::Render()
 {
-	map->Render();
-	player->Render();
-	monster->Render();
-	goal->Render();
+	for (auto actor : actors)
+	{
+		actor->Render();
+	}
 }
 
 void Engine::Run()

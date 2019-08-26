@@ -1,4 +1,6 @@
 #pragma once
+#include <vector>
+using namespace std;
 class Engine
 {
 private:
@@ -11,14 +13,14 @@ private:
 public:
 	Engine();
 	~Engine();
-	
+	int MonsterCnt = 3;
 
 	void Run();
 
-	class Player* player;
-	class Map* map;
-	class Monster* monster;
-	class Goal* goal;
+
 	class GameMode* gameMode;
+
+	vector<class Actor*> actors;
+	
 };
 

@@ -1,19 +1,19 @@
 #pragma once
-class Player
+#include "Character.h"
+class Player : public Character
 {
 public:
 	Player();
 	~Player();
 
-	int X;
-	int Y;
 
-	void Initialize();
-	void Move(int KeyCode, class Map* map);
-	char Shape;
-	
 
-	void Render();
+	virtual void Tick(int KeyCode, class Map* map) override;
+	virtual void Render() override;
 
+
+protected:
+
+	virtual void Move(int KeyCode, class Map* map) override;
 };
 

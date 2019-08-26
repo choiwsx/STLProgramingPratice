@@ -7,9 +7,12 @@
 
 Monster::Monster()
 {
+
 	X = 5;
 	Y = 5;
 	Shape = 'M';
+	srand(time(nullptr));
+
 }
 
 
@@ -18,16 +21,11 @@ Monster::~Monster()
 
 }
 
-void Monster::Initialize()
-{
-
-}
-
-void Monster::Move(class Map* map)
+void Monster::Move(int Keycode, class Map* map)
 {
 	int Direction = rand() % 4;
-	int NewMonsterY = Y;
-	int NewMonsterX = X;
+	NewMonsterY = Y;
+	NewMonsterX = X;
 	if (Direction == 0)
 	{
 		NewMonsterY--;
@@ -53,8 +51,14 @@ void Monster::Move(class Map* map)
 
 }
 
+void Monster::Tick(int KeyCode, class Map* map)
+{
+	Move(KeyCode, map);
+}
+
 void Monster::Render()
 {
-	GameplayStatics::GotoXY(X, Y);
+
+	GameplayStatics::GotoXY(X, Y, Color);
 	printf("%c", Shape);
 }

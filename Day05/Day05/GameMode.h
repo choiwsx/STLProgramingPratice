@@ -1,4 +1,7 @@
 #pragma once
+#include <vector>
+
+using namespace std;
 
 enum class EGameOverType
 {
@@ -14,6 +17,6 @@ public:
 	~GameMode();
 
 
-	EGameOverType CheckRule(class Player* player, class Monster* monster, class Goal* goal);
+	EGameOverType CheckRule(vector<class Actor*> actors);
 };
 
