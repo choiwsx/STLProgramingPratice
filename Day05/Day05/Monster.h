@@ -11,7 +11,6 @@ public:
 	int NewMonsterY;
 	int Color;
 
-
 	virtual void Tick(int KeyCode, class Map* map) override;
 	virtual void Render() override;
 

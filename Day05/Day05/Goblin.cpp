@@ -4,7 +4,7 @@
 
 Goblin::Goblin()
 {
-	Shape = 'G';
+	Shape = 'K';
 	Color = 1;
 }
 

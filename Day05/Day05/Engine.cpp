@@ -12,6 +12,7 @@ Engine::Engine()
 	bIsRunnging = true;
 	printf("엔진 생성\n");
 
+	gameMode = new GmaeMode();
 
 
 }

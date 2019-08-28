@@ -4,7 +4,7 @@
 
 Pig::Pig()
 {
-	Shape = 'K';
+	Shape = 'W';
 	Color = 3;
 }
 

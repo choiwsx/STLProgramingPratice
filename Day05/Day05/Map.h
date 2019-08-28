@@ -1,16 +1,15 @@
 #pragma once
 #include "Actor.h"
-class Map : public Actor
+#include "MapBase.h"
+
+class Map : public MapBase
 {
 public:
 	Map();
 	~Map();
 
-	void Initialize();
-	int Size;
-	char Tile[10] = { ' ', '-', '|' };
 
-	int data[20][20] = {
+	int data[10][10] = {
 	{1,1,1,1,1,1,1,1,1,1},
 	{2,0,0,0,0,0,0,0,0,2},
 	{2,0,0,0,0,0,0,0,0,2},
@@ -23,7 +22,6 @@ public:
 	{1,1,1,1,1,1,1,1,1,1},
 	};
 
-	void Render();
-
+	virtual void Render() override;
 };
 

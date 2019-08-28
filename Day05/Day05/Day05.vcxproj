@@ -149,6 +149,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Map2.cpp" />
+    <ClCompile Include="MapBase.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Pig.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Map2.h" />
+    <ClInclude Include="MapBase.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Pig.h" />
     <ClInclude Include="Player.h" />
